@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+header{
+    height: max-content;
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.461);
+}
+
+.containerIndex{
+    background-image: url(/img/fondoIndex.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: repeat(2, 25% 75%);
+    grid-template-areas: "header"
+                         "info";
+}
+
+a{
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 1.5s;
+}
+
+a:hover{
+    background-color: rgba(255, 235, 205, 0.635);
+    color:aqua;
+    
+}
+
+.menu{
+    font-family: 'Montserrat', sans-serif;
+    
+
+}   
+
+.infoIndex h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+}
+
+.infoIndex h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+    text-shadow: 10px;
+}
+
+.infoIndex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    align-items: center;
+    animation-name: aniInfoIndex;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+@keyframes aniInfoIndex{
+    0%{opacity: 0;}
+    100%{opacity: 1;}    
+}
+
+
+.infoIndex .info{
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.infoIndex .tittleIndex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    color: rgb(108, 108, 108);
+} 
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    height: min-content;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 20px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px;
+    background-color: rgba(240, 248, 255, 0.463);
+}
+
+/* CSS NOSOTROS */
+.containerNosotros{
+    background-image: url(/img/fondoNosotros.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 100vh;
+}
+
+.infoNosotros .tittlesHtml{
+    margin-bottom: 10px;
+
+}
+
+.infoNosotros p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.infoNosotros{
+    text-align: right;
+    color: white;
+    margin: 10% 5% 10% 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     
+
+}
+
+/* CSS SHOP */
+.containerShop{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 100vh;
+}
+
+.cardProduct{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}  
+
+.containerShop .tittlesHtml{
+    color: black;
+}
+
+/*CSS DE CONTACTO*/
+.containerContacto{
+    background-image: url(/img/fondoContacto.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 100vh;
+}
+
+.infoContacto{
+    display: grid;
+    margin-top: 8%;
+    margin-right: 50%;
+    grid-template-areas: "tittle   "
+                         "formulario";
+    grid-template-rows:repeat(1, 20% 80%);                         
+    
+}
+
+.tittlesHtml{
+    font-family: 'Staatliches', cursive;
+    font-size: 50px;
+    letter-spacing: 8px;
+    color: white;
+    text-align: center;
+    grid-area: tittle;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+select, input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formulario{
+    font-family: 'Montserrat', sans-serif;
+
+    margin-top: 20px;
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+
+/*CSS DEL CARRITO*/
+.containerCarrito{
+    background-image: url(/img/fondoCarrito.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 100vh;
+}
+
+
+
+.infoCarrito{
+    text-align: center;
+    display: grid;
+    grid-template-areas: "tittle"
+                         "tabla";
+    grid-template-rows: 20% 80%;               
+}
+
+.infoCarrito h1{
+    grid-area: tittle;
+    margin-top: 10px;
+    font-size: 50px;
+    color: rgb(118, 118, 118);
+}
+
+table{
+    grid-area: tabla;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    margin: 0% 30% 20% 30%;
+    line-height: 25px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+    .containerIndex{
+        background-image: url(/img/fondoIndex.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+        height: 120vh;
+    
+        display: grid;
+        grid-template-rows: repeat(2, 25% 75%);
+        grid-template-areas: "header"
+                             "info";
+    }
+
+    a .portada{
+        grid-area:portada;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:2px;
+    }
+
+    header{
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .infoIndex{
+        margin:0px;
+    }    
+
+
+    /* CSS NOSOTROS */
+    .infoNosotros{
+        text-align: right;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+         
+    
+    }
+    
+    .infoNosotros p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* CSS SHOP */
+    .containerShop{
+        background-image:url("/img/error404.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-position: center;
+    }
+
+    /* CSS CONTACTO */
+    .infoContacto{
+        display: grid;
+        margin-top: 8%;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+                           
+        
+    }
+
+}
